@@ -3,60 +3,51 @@ import './App.scss';
 
 import {
   Switch,
-  withRouter,
   Route,
-  Redirect
+  Redirect,
+  NavLink
 } from 'react-router-dom';
-// import { Menu, Icon } from 'antd';
-
 import Home from './view/Home/Home';
+import Lend from './view/Lend/Lend';
+import Mine from './view/Mine/Mine';
+
+
 
 
 class App extends Component {
   constructor(){
     super();
     this.state={
-      nav:[
-        {
-          name:'Home',
-          path:'./home',
-          icon:'home',
-          title:'首页'
-        },
-        {
-          name:'Lend',
-          path:'./lend',
-          icon:'home',
-          title:'借出'
-        },
-        {
-          name:'Mine',
-          path:'./mine',
-          icon:'user',
-          title:'我的'
-        },
-      ],
-      current:'Home'
+     pic:{
+       url:''
+     }
     }
+     
   }
-  render(){
-    let {nav}=this.state;
 
+  render(){
+    
     return (
       <div className="App">
-      
+        {/* 路由信息 */}
+      <Switch>
       <Route path='/home' component={Home}/>
+      <Route path='/lend' component={Lend}/>
+      <Route path='/mine' component={Mine}/>
+      <Redirect from='/' to='/home' exact/>
+      </Switch>
+      {/* 底部导航 */}
       <footer>
           <nav>
               <ul> 
-                <li className={"active"}>
-                   <a href={"/wechat/home/index"}> <i className={"icon ic-home"}></i> <span>首页</span> </a> 
+                <li >
+                  <NavLink to='/home' activeStyle={{color:'#40538f',fontWeight:"bolder"}} ><i className="icon ic-home"></i> <span>首页</span> </NavLink>
                 </li>
                <li>
-                  <a href={"/wechat/mark/marklist"}> <i className={"icon ic-list"}></i> <span>出借</span> </a> 
+               <NavLink to='/lend' activeStyle={{color:'#40538f',fontWeight:"bolder"}}><i className="icon ic-list"></i> <span>出借</span></NavLink>  
                 </li>
                <li> 
-                 <a href={"/wechat/user/index"}> <i className={"icon ic-user"}></i> <span>我的</span> </a> 
+               <NavLink to='/mine' activeStyle={{color:'#40538f',fontWeight:"bolder"}}><i className="icon ic-user"></i> <span>我的</span></NavLink>  
               </li>
               </ul> 
           </nav> 

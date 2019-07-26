@@ -2,6 +2,7 @@ article, aside, footer, header, nav, section {
     display: block;
 }
 footer {
+    padding-bottom: 1.433333rem;
     height: 1.30667rem;
     width: 100%;
     font-size: .26667rem;
@@ -33,7 +34,7 @@ footer nav ul li {
     padding-top: .133333rem;
 }
 footer nav ul li .icon.ic-home {
-    background-image: url(./assets/images/home.png);
+    background-image: url(./assets/images/home1.png);
 }
 footer nav ul li .icon {
     height: .8rem;
@@ -49,9 +50,7 @@ footer nav ul li .icon {
 }
 footer nav ul li.active span {
     color: #40538f;
-}
-footer nav ul li span {
-    color: #646464;
+   
 }
 footer nav ul li .icon.ic-list {
     background-image: url(./assets/images/z.png);

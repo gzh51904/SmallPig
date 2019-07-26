@@ -5,15 +5,25 @@ class Home extends Component{
     constructor(){
         super();
         this.state={
-
+            style:{
+                display:'none'
+            }
+           
         }
+        this.hide=this.hide.bind(this)
     }
+
+    hide(){
+      console.log(this.refs.hide)  
+      this.refs.hide.style.display= 'none'
+    }
+
     render(){
         return (
             <div>
-                <section id={"top"} className={"top"} style={{display: "block"}}>
-                     <a href={"/?cut=web"}>点击返回电脑端</a> 
-                     <i id={"topClose"}></i>
+                <section id={"top"} ref='hide' className={"top"} style={{display: "block"}}>
+                     <a href="https://www.xiaozhu158.com/?cut=web">点击返回电脑端</a> 
+                     <i id={"topClose"} onClick={this.hide}></i>
                 </section>
                 <div>
                     <Carousel autoplay>
@@ -53,7 +63,7 @@ class Home extends Component{
                                 <p className={"logo"}> <img src={require('../../assets/images/msg.png')} style={{width:'1.52rem' ,height: '1.52rem'}} alt={''}/>  <span>信息披露</span> </p>
                         </a>
                     </div>
-                    <ul className={"bdlist"}> 
+                     <ul className={"bdlist"}> 
                         <li> 
                             <a href={"/wechat/mark/details/id/62945"}> 
                                 <i className={"tag"}></i> 
@@ -88,7 +98,7 @@ class Home extends Component{
                             <a href={"/wechat/mark/details/id/62945"} className={"btn big bg disable"}>已满标</a> 
                          </li>
                        
-                    </ul> 
+                    </ul>  
                 </main>
                     
                    
