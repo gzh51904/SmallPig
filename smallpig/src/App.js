@@ -10,6 +10,8 @@ import {
 import Home from './view/Home/Home';
 import Lend from './view/Lend/Lend';
 import Mine from './view/Mine/Mine';
+import Detail from './view/Detail/Detail';
+
 
 
 
@@ -34,6 +36,7 @@ class App extends Component {
       <Route path='/home' component={Home}/>
       <Route path='/lend' component={Lend}/>
       <Route path='/mine' component={Mine}/>
+      <Route path="/detail" component={Detail}/>
       <Redirect from='/' to='/home' exact/>
       </Switch>
       {/* 底部导航 */}
