@@ -9,8 +9,8 @@ const { mysql: query } = require("../db");
 
 Router.post('/', async (req, res) => {
 
-    let sql01 = `SELECT * FROM singin WHERE userphone=${req.body["phone"]}`;
-    let sql02 = `SELECT * FROM singin WHERE userphone=${req.body["phone"]} and password = ${req.body["password"]}`;
+    let sql01 = `SELECT * FROM singin WHERE userphone=${req.body.params["phone"]}`;
+    // let sql02 = `SELECT * FROM singin WHERE userphone=${req.body["phone"]} and password = ${req.body["password"]}`;
 
     console.log("sql01", sql01);
 
@@ -21,9 +21,10 @@ Router.post('/', async (req, res) => {
         if (data.length == 0) {
             let values = '';
 
-            for (var key in req.body) {
-                values += `'${req.body[key]}',`
+            for (var key in req.body.params) {
+                values += `'${req.body.params[key]}',`
             }
+            console.log("45544", values);
 
             values = values.slice(0, -1);
             sql = `INSERT INTO singin (userphone,password) VALUES (${values})`

@@ -5,7 +5,7 @@ const Router = express.Router();
 const goodsRouter = require('./goods');
 const regRouter = require('./reg');
 const loginRouter = require('./login');
-// const uploadRouter = require('./upload');
+const uploadRouter = require('./upload');
 
 const { formatData, token: { verify } } = require('../utils');
 
@@ -29,7 +29,8 @@ Router.use((req, res, next) => {
     });
     // if(has){
     res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+    // res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
     res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
     // }
 
@@ -49,7 +50,7 @@ Router.use((req, res, next) => {
 Router.use('/goods', goodsRouter);
 Router.use('/reg', regRouter);
 Router.use('/login', loginRouter);
-// Router.use('/upload', uploadRouter);
+Router.use('/upload', uploadRouter);
 
 // 校验token
 Router.use('/verify', (req, res) => {

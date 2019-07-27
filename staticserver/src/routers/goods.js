@@ -49,6 +49,7 @@ Router.post('/', (req, res) => {
 
     let names = '';
     let tmp = '';
+    console.log("req.body++++++++++++", req.body);
 
     for (let key in req.body) {
 
@@ -86,7 +87,8 @@ Router.put("/:id", (req, res) => {
         values += `${key}='${req.body[key]}',`
     }
     values = values.slice(0, -1);
-    sql = `UPDATE goods set ${values} WHERE id=${id}`;
+    sql = `UPDATE goods set ${values} WHERE ${id}`;
+    console.log("---sql----------", sql);
 
 
     query(sql).then(function (data) {
@@ -106,8 +108,11 @@ Router.delete("/:id", (req, res) => {
         id
     } = req.params;
 
-    sql = `DELETE  FROM goods WHERE id=${id}`;
+    console.log(id);
 
+
+    sql = `DELETE  FROM goods WHERE ${id}`;
+    console.log(sql);
 
     query(sql).then(function (data) {
         res.send(formatData({

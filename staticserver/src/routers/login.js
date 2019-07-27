@@ -6,9 +6,11 @@ const { mysql: query } = require("../db");
 
 
 Router.post('/', async (req, res) => {
+    console.log("req.body+++++++++++++++++", req.body.params);
 
-    let sql01 = `SELECT * FROM singin WHERE userphone=${req.body["phone"]}`;
-    let sql02 = `SELECT * FROM singin WHERE userphone=${req.body["phone"]} and password = ${req.body["password"]}`;
+
+    let sql01 = `SELECT * FROM singin WHERE userphone=${req.body.params["phone"]}`;
+    let sql02 = `SELECT * FROM singin WHERE userphone=${req.body.params["phone"]} and password = ${req.body.params["password"]}`;
     let userphone = req.body["phone"]
     console.log("sql01", sql01);
 
