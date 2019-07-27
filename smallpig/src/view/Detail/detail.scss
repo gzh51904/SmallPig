@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+article, aside, footer, header, nav, section {
+    display: block;
+}
+header {
+    background-color: #40538f;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+header .annual {
+    font-size: .426667rem;
+    height: 4.066667rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+header .annual span {
+    font-size: .96rem;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+header .annual p.title {
+    font-size: .266667rem;
+    color: #9da8cc;
+    margin-top: .133333rem;
+}
+header .progress {
+    position: absolute;
+    bottom: 2.333333rem;
+    width: 100%;
+}
+header .progress .value {
+    height: .066667rem;
+    width: 70%;
+    background-color: #9da8cc;
+}
+.progress .value {
+    position: relative;
+}
+.progress .value.before::before, .progress .value.after::after {
+    display: block;
+}
+.progress .value::after {
+    content: attr(data-progress);
+    position: absolute;
+    top: -.4rem;
+    right: .1rem;
+    font-size: .266667rem;
+    display: none;
+}
+header .data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 2.333333rem;
+}
+header .data .item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+header .data .item span.value {
+    font-size: .48rem;
+}
+header .data .item span.title {
+    color: #9da8cc;
+    font-size: .266667rem;
+    margin-top: .266667rem;
+}
+figcaption, figure, .main {
+    display: block;
+}
+.main .card {
+    background: #fafaff;
+    // padding: .266667rem 0;
+    margin-top: .266667rem;
+}
+.main .bd-desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: .32rem;
+    line-height: .6rem;
+}
+.main .bd-desc .title {
+    width: 1.866667rem;
+    color: #646464;
+    text-align: right;
+}
+.main .bd-desc .value {
+    width: 7.733333rem;
+    color: #323232;
+}
+.main .desc .title, main .desc .value {
+    margin-top: .266667rem;
+}
+.main .desc .value {
+    color: #646464;
+    line-height: 1.5;
+}
+main .desc {
+    font-size: .32rem;
+    padding: .266667rem;
+}
+.footered{
+    height: 1.173333rem;
+    width: 100%;
+}
+.footered span.disable {
+    background-color: #b4c0d0;
+}
+.footered span {
+    height: 1.429333rem;
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+    font-size: .48rem;
+    line-height: 1.429333rem;
+    text-align: center;
+    background-color: #fb6e53;
+    z-index: 1001;
+    width: 10rem;
+}
