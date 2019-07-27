@@ -1,0 +1,6 @@
+{
+    "PORT": 3010,
+    "mongourl": "mongodb://localhost:27017",
+    "dbname": "laoxie",
+    "pKey": "smallpig"
+}
