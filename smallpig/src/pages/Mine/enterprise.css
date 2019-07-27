@@ -1,0 +1,53 @@
+.enterp{
+    transition: all .2s;
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.flex-font-item {
+    display: block;
+    margin: 0 .6666667rem;
+    line-height: 24px;
+    font-size: .32rem;
+}
+.jy-section1{
+    padding: 0;
+    background: url(../../asset/img/cb_bg3.jpg) center no-repeat;
+    height: 10.4rem;
+    text-align: center;
+}
+.jy-section1 img {
+    margin-top: .5rem;
+    width: 30%;
+}
+.jy-section1 ul {
+    color: #fff;
+}
+.jy-section1 ul li {
+    padding: 0 .5rem;
+    width: auto;
+    margin-top: .4rem;
+    text-align: left;
+    font-size: 0.32rem;
+    line-height: .6rem /* 45/75 */;
+}
+.sect{
+    background: #fafaff;
+    
+    padding-bottom: .666667rem;
+}
+span.btn{
+    line-height: 1.173333rem;
+    display: block;
+    outline: none;
+    border: none;
+    width: 8rem;
+    text-align: center;
+    height: 1.173333rem;
+    font-size: .48rem;
+    background: #fb6e53;
+    border-radius: .5866665rem;
+    color: #FFF;
+    box-shadow: 0 5px 5px rgba(251, 110, 83, 0.5);
+    margin: 1.066667rem auto 2rem auto;
+}

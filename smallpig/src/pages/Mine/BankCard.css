@@ -1,0 +1,107 @@
+.card label {
+    display: flex;
+    height: 1.173333rem;
+    font-size: .426667rem;
+    background-color: #fafaff;
+    border-bottom: 1px solid #d7d8dc;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+.card label span {
+    display: inline-block;
+    width: 2.666667rem;
+    padding-left: .266667rem;
+    line-height: 1.173333rem;
+}
+.card label input[type=text] {
+    height: 1.173333rem;
+    width: 6.7rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+.bank, .verify {
+    margin-top: .266667rem;
+}
+.card label .btn.btn-verify {
+    margin-right: .266667rem;
+    color: #40538f;
+    position: absolute;
+    right: 0;
+    top: .32rem;
+    height: .53333rem;
+    width: 1.86667rem;
+    border-radius: .26667rem;
+    line-height: .53333rem;
+    font-size: .266667rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background: none;
+    text-transform: none;
+    background-color: #fff;
+    border: .33333px solid #40538f;
+}
+.card p {
+    margin-top: .4rem;
+    padding-left: .266667rem;
+    font-size: .32rem;
+    color: #909090;
+}
+.card p a {
+    color: #40538f;
+    position: absolute;
+    right: .266667rem;
+}
+.checkbox-group {
+    padding-left: .8rem;
+    margin-top: 1.866667rem;
+}
+input[type=checkbox] {
+    display: none;
+    height: 0;
+    width: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+input[type=checkbox]:checked+label {
+    /* background-image: url(../images/checked.png); */
+    background-size: .266667rem .266667rem;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+.checkbox-group label {
+    margin-top: .2rem;
+    height:.2rem;
+    background:  #efeff4;
+}
+.checkbox span {
+    padding-left: 0;
+    line-height: 1;
+    font-size: .266667rem;
+}
+label a {
+    color: #40538f;
+    font-size: .266667rem;
+}
+.footer{
+    text-align: center;
+    margin-top: .833333rem;
+    padding: 0 0 5.6rem;
+}
+.footer p{
+    margin-top: .4rem;
+    padding-left: .266667rem;
+    font-size: .32rem;
+    color: #909090;
+}

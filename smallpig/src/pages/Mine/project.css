@@ -1,0 +1,59 @@
+.header .top {
+    background-color: #40538f;
+    height: 3.866667rem;
+    width: 100%;
+}
+.header .top p {
+    color: #fff;
+    height: 1.933333rem;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 49%;
+    position: relative;
+}
+.header .top p:first-child {
+    width: 100%;
+}
+.header .top p .title {
+    font-size: .32rem;
+    color: #9da8cc;
+}
+.header .top p:first-child .value {
+    font-size: .506667rem;
+}
+.header .top p .value {
+    font-size: .32rem;
+    margin-top: .266667rem;
+}
+.tab ul {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 1.173333rem;
+    font-size: .426667rem;
+    background-color: #fafaff;
+    box-shadow: 0 0 0.04rem #c8c8cc;
+}
+.tab li {
+    -webkit-box-flex: 1;
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    line-height: 1.173333rem;
+    color: #646464;
+}
+.tab li.active {
+    border-bottom: .33333px solid #40538f;
+    color: #40538f
+}
+

@@ -1,0 +1,35 @@
+.tabss {
+    width: 100%;
+    text-align: center;
+    line-height: 1.14667rem;
+    display: flex;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    height: 1.14667rem;
+    background: #fafaff;
+    align-items: center;
+    vertical-align: middle;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    position: fixed;
+    z-index: 2;
+}
+.tabss span {
+    display: block;
+    width: 100%;
+    flex: 1;
+    color: #323232;
+    -webkit-box-flex: 1;
+}
+.tabss span.active {
+    position: relative;
+    color: #485da8;
+}
+.tabss span.active:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    border-bottom: 2px solid #485da8;
+}

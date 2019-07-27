@@ -1,0 +1,223 @@
+.profile {
+    background-color: #40538f;
+    height: 5.77333rem;
+    width: 100%;
+    position: relative;
+    padding-top: .96rem;
+}
+.profile .total {
+    text-align: center;
+    width: 5.133333rem;
+    height: 4.813333rem;
+    margin: 0 auto;
+    position: relative;
+  
+   
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    background: url(../../asset/img/mime.png) center no-repeat;
+    background-size: 100%;
+}
+.profile .total .value {
+    font-size: .506667rem;
+    color: #fff;
+    margin-top: .446667rem;
+}
+.profile .total span {
+    display: block;
+}
+.profile .total .title {
+    font-size: .426667rem;
+    color: #9da8cc;
+    margin-top: .133333rem;
+}
+.profile .profit.left {
+    left: .266667rem;
+}
+.profile .profit {
+    position: absolute;
+    bottom: .466667rem;
+}
+.profile .profit {
+    position: absolute;
+    bottom: .466667rem;
+}
+.profile .profit .value {
+    color: #fff;
+    font-size: .373333rem;
+}
+.profile .profit .title {
+    color: #9da8cc;
+    font-size: .32rem;
+    margin-top: .066667rem;
+}
+.profile .profit span {
+    display: block;
+}
+.profile .profit.right {
+    right: .266667rem;
+    text-align: right;
+}
+.recharge {
+    height: 1.173333rem;
+    display: block;
+    color: #fff;
+    background-color: #40538f;
+    font-size: .426667rem;
+    line-height: 1.173333rem;
+    position: relative;
+}
+.recharge p {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.28);
+}
+.recharge .title {
+    font-size: .373333rem;
+    color: #9da8cc;
+    margin-left: .266667rem;
+}
+.recharge .tor {
+    position: absolute;
+    right: .826667rem;
+}
+.recharge p:after {
+    content: "";
+    background-image: url(../../asset/img/wr.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50%;
+    width: .213333rem;
+    height: .266667rem;
+    display: block;
+    position: absolute;
+    right: .266667rem;
+    top: .45333rem;
+}
+.sitem.nobd {
+    border: none;
+}
+.sitem span {
+    margin-left: .266667rem;
+}
+.sitem {
+    height: 1.173333rem;
+    position: relative;
+    width: 100%;
+    color: #323232;
+    font-size: .426667rem;
+    line-height: 1.173333rem;
+    background-color: #fafaff;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sitem:after {
+    content: "";
+    background-image: url(../../asset/img/wg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50%;
+    width: .213333rem;
+    height: .333333rem;
+    display: block;
+    position: absolute;
+    right: .266667rem;
+    top: .42rem;
+}
+.project-layout .project {
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fafaff;
+    padding-bottom: .32rem;
+    border-bottom: .013333rem solid #d6d7dc;
+}
+.project-layout .project p {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+.project-layout .project p .value {
+    color: #323232;
+    font-size: .293333rem;
+}
+.project-layout .project p span {
+    display: block;
+}
+.project-layout .project p .title {
+    color: #909090;
+    font-size: .32rem;
+}
+.items {
+    margin-top: .266667rem;
+}
+.sitem {
+    height: 1.173333rem;
+    position: relative;
+    width: 100%;
+    color: #323232;
+    font-size: .426667rem;
+    line-height: 1.173333rem;
+    background-color: #fafaff;
+    border-bottom: .013333rem solid #d6d7dc;
+    display: block;
+    user-select: none;
+}
+.sitem .icon.ic-auto {
+    background-image: url(../../asset/img/icauto.png);
+}
+.sitem .icon {
+    width: .48rem;
+    height: .48rem;
+    vertical-align: middle;
+    margin-left: .266667rem;
+}
+.icon {
+    display: inline-block;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.sitem .icon.ic-info {
+    background-image: url(../../asset/img/信息披露.png);
+}
+.sitem .icon.ic-product {
+    background-image: url(../../asset/img/产品介绍.png);
+}
+.btns{
+    padding: .506667rem 0 2rem;
+}
+.btns .btn{
+    margin:0 auto;
+    border: .33333px solid #40538f;
+    background-color: #fff;
+    color: #40538f;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+    height: 1.17333rem;
+    width: 8.8rem;
+    border-radius: .58667rem;
+    line-height: 1.17333rem;
+   
+    font-size: .48rem;
+}
