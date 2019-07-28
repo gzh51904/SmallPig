@@ -8,14 +8,14 @@ ul li {
 a{
     text-decoration: none;
 }
-.content, .tabs[data-v-2a555b8b] {
+.content, .tabs {
     display: -ms-flexbox;
     display: flex;
 }
 .content {
     position: relative;
     top: 1.17333rem;
-    padding-bottom: .5rem;
+    padding-bottom: 1.5rem;
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-align: center;
@@ -23,7 +23,7 @@ a{
     -ms-flex-line-pack: center;
     align-content: center;
 }
-.common-item[data-v-6758f702] {
+.common-item {
     width: 100%;
     position: relative;
     background: #fafaff;
@@ -31,7 +31,7 @@ a{
     padding-top: .466667rem;
     padding-bottom: .466667rem;
 }
-.common-item .common-item-title[data-v-6758f702] {
+.common-item .common-item-title {
     font-size: .32rem;
     padding-left: .32rem;
     height: .35rem;
@@ -48,18 +48,18 @@ a{
     margin-bottom: .14rem;
 }
 
-.common-item .common-item-title .icon[data-v-6758f702] {
+.common-item .common-item-title .icon {
     width: .07rem;
     height: .28rem;
     background: #485da8;
     border-radius: .05333rem;
     margin-right: .1rem;
 }
-.common-item ul[data-v-6758f702] {
+.common-item ul {
     width: 100%;
     overflow: hidden;
 }
-.common-item ul li[data-v-6758f702] {
+.common-item ul li {
     float: left;
     display: block;
     min-width: 50%;
@@ -70,17 +70,17 @@ a{
     padding-left: .32rem;
     list-style: none;
 }
-.common-item ul li .name[data-v-6758f702] {
+.common-item ul li .name {
     color: #909090;
     display: block;
     float: left;
 }
-.common-item ul li .value[data-v-6758f702] {
+.common-item ul li .value {
     color: #323232;
     display: block;
     float: left;
 }
-.common-item[data-v-6758f702] {
+.common-item {
     width: 100%;
     position: relative;
     background: #fafaff;
@@ -88,16 +88,21 @@ a{
     padding-top: .466667rem;
     padding-bottom: .466667rem;
 }
-.common-item .flex-font-item[data-v-6758f702] {
+.common-item .flex-font-item {
     display: block;
     margin: 0 .32rem .576rem;
     font-size: .32rem;
     line-height: 1.5;
 }
-.common-item .mt-3[data-v-6758f702] {
+.common-item .mt-3 {
     margin: -.4rem .32rem .3rem;
     color: #485da7;
 }
-.orange[data-v-6758f702] {
+.orange {
     color: #f09851;
+}
+.common-item .fx {
+    margin: 0 .32rem;
+    line-height: 1.5;
+    font-size: .32rem;
 }

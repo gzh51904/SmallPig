@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './lending.scss'
 
 class Lending extends Component{
     render(){
@@ -29,7 +30,7 @@ class Lending extends Component{
                             </ul>
                         </div>     
                         <div className="common-item clear-padding-bottom">
-                            <p className="common-item-title"><i class="icon icon-border"></i><span>借款说明</span></p> 
+                            <p className="common-item-title"><i className="icon icon-border"></i><span>借款说明</span></p> 
                             <p className="flex-font-item">
                                 1.借款企业具备相关的营业许可，有固定业务渠道，稳定的合作单位，资金流健康，应收账款较多，具备一定的还款能力；2.借款企业是核心企业的上游材料/劳务供应公司，与核心企业签署了供销采购/劳务合同；3.借款企业在核心企业具有一定的应收账款，借款资金仅用于借款企业的短期经营周转；4.核心企业作为供应链的核心，财务健康，年施工额在两千万以上，具有较强的担保能力；5.为了更进一步把控风险，保障资金安全，本次借款追加核心企业的无限连带责任担保。</p> 
                             <p className="flex-font-item mt-3"></p>     
@@ -50,7 +51,7 @@ class Lending extends Component{
                             </ul>
                         </div>
                         <div className="common-item">
-                            <p className="common-item-title"><i class="icon icon-border"></i><span>风险提示</span></p> 
+                            <p className="common-item-title"><i className="icon icon-border"></i><span>风险提示</span></p> 
                             <p className="fx"><span>小猪理财及其合作机构将始终践行以风险控制为核心，最大程度的尽力确保借款人信息的真实性，小猪理财仅为信息发布平台，出借人应根据自身的出借偏好和风险承受能力进行独立判断和作出决策，并自行承担资金出借的风险与责任，市场有风险 出借需谨慎。</span></p>
                         </div>
                     </div>

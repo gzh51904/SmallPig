@@ -42,9 +42,14 @@ class Detail extends Component{
         // 路由跳转
         // 获取点击的路由路径
         let currentRouter = this.state.nav.filter(item=>item.name===data.key)[0];
-        this.props.history.push(currentRouter.path)
+        console.log(currentRouter);
+
+        this.props.history.push('/detail'+currentRouter.path)//img
       }
+      
     render(){
+      console.log('detail',this.props)
+      let {path,url}=this.props.match
         return (
         <div>
             <header> 
@@ -85,14 +90,10 @@ class Detail extends Component{
           </Menu>
            {/* 路由信息 */}
            <Switch>
-          {/* {
-            this.state.nav.map(item=><Route key={item.name} path={item.path} component={item.name}/>)
-          } */}
-         
-          <Route path="/img" component={Img}/>
-          <Route path="/record" component={Record}/>
-          <Route path="/lending" component={Lending}/>
-          <Redirect from="/" to="/lending" exact/>
+          <Route path={path+"/img"} component={Img}/>
+          <Route path={path+"/record"} component={Record}/>
+          <Route path={path+"/lending"} component={Lending}/>
+          <Redirect  to={path+"/lending"} exact/>
           </Switch>
          
             <div className="footered"> <span  className="disable">已满标</span> </div>

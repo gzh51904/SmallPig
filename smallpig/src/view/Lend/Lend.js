@@ -5,8 +5,8 @@ import {NavLink,Route} from 'react-router-dom';
 
 import './lend.scss'
 class Lend extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             pro:[
                 {name:'建材供应货',number:'GYD201807230100', date:'90天', value1:'11.0', value2:'%+2%' },
@@ -36,18 +36,36 @@ class Lend extends Component{
                 {name:'项目承包贷',number:'CBD201807230905', date:'90天', value1:'11.0', value2:'%+0%' },
                 
             ],
+            data:{
+                isToggleOn: true,
+                display:'none'
+            },
+            currentIndex: 0
+        
             
         }
-   
+        this.showhide=this.showhide.bind(this)
+        this.setCurrentIndex = this.setCurrentIndex.bind(this)
     }
-    
+    showhide(){
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn,
+            display: prevState.isToggleOn ? 'none': 'block'
+          }));
+
+    }
+    setCurrentIndex(event) {
+        this.setState({
+          currentIndex: parseInt(event.currentTarget.getAttribute('index'), 10)
+        })
+      }
     render(){
         return (
         <div>
             <div className="heads" style={{backgroundcolor: '#efeff4'}}>
                 <nav>
                     <ul className="menus"> 
-                         <li className="menu"> <span>全部</span> <i className="icon ic-order-normal active"></i> </li>
+                         <li className="menu" onClick={this.showhide}> <span>全部</span> <i className="icon ic-order-normal active"></i> </li>
                          <li className="menu"> <span>项目期限</span> <i className="icon ic-order-normal2"></i> </li> 
                          <li className="menu"> <span>年化收益</span> <i className="icon ic-order-normal2"></i> </li>
                     </ul> 
@@ -90,7 +108,17 @@ class Lend extends Component{
             </main>
             {/* 路由信息 在App.js中*/}
             {/* <Route path="/detail" component={Detail}/> */}
-
+            <div className="order active" id="order1" ref='sh' style={{display: this.state.display}}> 
+                 <ul> 
+                     <li data-name="0" className="active" className={this.state.currentIndex === i ? 'active' : ''}
+               index={i} onClick={this.setCurrentIndex}>全部</li> 
+                     <li data-name="6">企业经营贷</li> 
+                     <li data-name="3">建材供应贷</li> 
+                     <li data-name="7">小微企业贷</li> 
+                     <li data-name="4">项目承包贷</li> 
+                     <li data-name="5">精英担保贷</li> 
+                </ul> 
+            </div>
         </div>
         )
     }

@@ -298,3 +298,29 @@ body {
     -webkit-font-feature-settings: 'tnum';
     font-feature-settings: 'tnum', "tnum";
 }
+.order.active {
+    top: 1.186667rem;
+    display: block;
+}
+.order {
+    position: fixed;
+    display: none;
+    background-color: #fafaff;
+    width: 100%;
+    z-index: 3;
+    left: 0;
+    overflow: hidden;
+    line-height: 1.173333rem;
+}
+.order ul li.active {
+    background: url(../../assets/images/gou.png) no-repeat;
+    background-size: .4rem .293333rem;
+    background-position-y: center;
+    background-position-x: 90%;
+    color: #40538f;
+}
+.order ul li {
+    width: 100%;
+    text-align: left;
+    padding-left: .4rem;
+}
