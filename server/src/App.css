@@ -34,4 +34,30 @@
   text-align: right;
   font-size: 16px;
   margin-right: 40px;
+  cursor: pointer;
+}
+.login-box{
+  width: 400px;
+  height: 300px;
+  border: 1px solid #aaaaaa;
+  margin:  100px auto;
+  background-color: #d4d3d3;
+}
+.login-box>h2{
+margin: 5px 10px;
+}
+.login-comon{
+width: 70%;
+height: 40px;
+margin: 15px 20px;
+}
+.login-title{
+  margin-left: 10px;
+}
+.login-button{
+  width: 70px;
+  height: 35px;
+  border-radius: 5px;
+background-color: #2df526;
+margin: 20px 180px;
 }

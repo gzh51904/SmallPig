@@ -37,7 +37,8 @@ class Addgoods extends Component {
             addorchanges: false,
             InputValue: '',
             loading: false,
-            getimageUrl: ''
+            getimageUrl: '',
+
         }
 
         this.addorchange = this.addorchange.bind(this)
@@ -86,22 +87,25 @@ class Addgoods extends Component {
             addOrChangeItem: { ...this.state.addOrChangeItem, ...dsd },
         })
 
-        console.log("this.state.InputValue---", this.state.addOrChangeItem);
+
     }
     async addorchange() {
-        console.log("this.state.InputValue---", this.state.addOrChangeItem.id);
+
 
         let id = this.state.addOrChangeItem.id
 
         if (this.state.addorchanges) {
             let { data } = await api.put('/goods/id=' + id, this.state.addOrChangeItem);
-            console.log(data);
 
-            // if (data.code === 1000) {
-            //     alert("添加商品成功")
-            // };
+
+            if (data.code === 1000) {
+                alert("修改商品成功")
+            };
         } else {
             let { data } = await api.post('/goods', this.state.addOrChangeItem);
+            if (data.code === 1000) {
+                alert("添加商品成功")
+            };
         }
 
 

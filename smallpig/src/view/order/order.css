@@ -1,0 +1,219 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #efeff4;
+}
+.nav {
+	height: 1.173333rem;
+	box-shadow: 0 0 0.04rem #c8c8cc;
+	width: 100%;
+	position: relative;
+	background: #fafaff;
+}
+
+.nav .menu {
+	float: left;
+	width: 33.333333%;
+	height: 1.173333rem;
+	line-height: 1.173333rem;
+	text-align: center;
+	z-index: 2;
+}
+
+.nav .menu span {
+	font-size: .426667rem;
+	color: #646464;
+}
+
+.nav .menu i {
+	display: inline-block;
+	background-image: url(./order_2.png);
+	width: .266667rem;
+	height: .133333rem;
+	vertical-align: middle;
+	background-position: 50%;
+	background-size: 100%;
+	margin-left: .1rem;
+	margin-top: -0.1rem;
+}
+.nav .menu:nth-child(2) i{
+	background-image: url(https://www.xiaozhu158.com/themes/simplebootx/Wechat/images/list/normal.png);
+	height: .333333rem;
+
+}
+.nav .menu:nth-child(3) i{
+	background-image: url(https://www.xiaozhu158.com/themes/simplebootx/Wechat/images/list/normal.png);
+	height: .333333rem;
+
+}
+ul {
+	margin-top: .5rem;
+}
+.bd-list .disable {
+    position: relative;
+    width: 100%;
+	margin-bottom: .266667rem;
+    padding-top: .533333rem;
+    background-color: #fafaff;
+    padding-bottom: .533333rem;
+}
+.disable .main {
+    opacity: .7;
+    position: relative;
+}
+.main .bd-name-layout {
+    margin-left: .4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: auto;
+}
+.bd-name-layout .name {
+    font-size: .426667rem;
+}
+ .bd-name-layout .number {
+    font-size: .32rem;
+    color: #646464;
+}
+.icon.ic-bd-type {
+    width: .373333rem;
+    height: .453333rem;
+    margin: 0 0 0 .133333rem;
+	vertical-align: middle;
+}
+ .main .payment {
+    color: #909090;
+    margin-top: .666667rem;
+    margin-left: .4rem;
+}
+.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: .533333rem;
+    margin-left: .4rem;
+}
+.content .item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.item .value {
+    display: inline-block;
+    vertical-align: baseline;
+}
+.item .title {
+    color: #909090;
+    font-size: .266667rem;
+    margin-top: .4rem;
+}
+.item.annual p span:first-child {
+    font-size: 1rem;
+	color: #fb6e53;
+}
+main .bd-list li .main .content .item.annual p span:first-child {
+    font-size: .8rem;
+}
+.annual span {
+    color: #fb6e53;
+	font-size: .426667rem;
+
+}
+main .bd-list li .main .content .item .title {
+    color: #909090;
+    font-size: .266667rem;
+}
+main .bd-list li .main .content .item {
+    flex: 1;
+}
+main .bd-list li .main .content .item:nth-child(2) {
+    text-align: center;
+}
+.term {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+	 flex-direction: column;
+    align-content: center;
+}
+.term .value span {
+	font-size: .4rem;
+}
+p {
+	margin-bottom: 0;
+}
+.item .title {
+    color: #909090;
+    font-size: .266667rem;
+}
+.term .value span {
+	font-size: 0.6rem;
+	font-size: .64rem;
+	position: relative;
+    top: .1rem;
+}
+.balance {
+	flex: 1;
+	position: relative;
+}
+ .item .value {
+    height: .96rem;
+    display: inline-block;
+    vertical-align: baseline;
+}
+ .item.balance .value {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+.item.balance .title {
+    width: 2.666667rem;
+    position: absolute;
+    right: .4rem;
+	top:.7rem;
+    text-align: center;
+}
+ .item .title {
+    color: #909090;
+    font-size: .266667rem;
+    margin-top: .4rem;
+}
+.bd-tag {
+    opacity: .7;
+	position: absolute;
+    opacity: .7;
+    right: .266667rem;
+    top: .266667rem;
+    font-size: .266667rem;
+    z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-content: center;
+
+    justify-content: center;
+
+    align-items: center;
+}
+ .bd-state {
+    display: block;
+    position: absolute;
+    right: 0;
+    background-color: #fafaff;
+    top: .5rem;
+    z-index: 1;
+}
+.bd-state img {
+    width: 3.146667rem;
+    height: 3.16rem;
+}

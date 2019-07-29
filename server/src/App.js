@@ -3,14 +3,14 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 
 import { Menu, Icon, Breadcrumb } from 'antd'
 
-
+import { api } from "./utils/idnex";
 import Goodslist from './pages/goodslist/index';
 import Information from './pages/information/index';
 import Orders from './pages/orders/index';
 import Addgoods from './pages/goodslist/addgoods';
 import Addinfor from './pages/information/Addinfor';
 import Addorders from './pages/orders/Addorders';
-import loginin from './pages/login/loginIn';
+import Loginin from './pages/login/loginIn';
 import './App.css';
 
 
@@ -65,9 +65,15 @@ class App extends Component {
         ['sub1', 1, 2, 3, 4],
       current: '',
       openKeys: ['sub1'],
+      islogin: false,
+
+      username: '',
+      password: ''
+
     }
     this.handleClick = this.handleClick.bind(this)
-    // this.onToggle = this.onToggle.bind(this)
+    this.handlePost = this.handlePost.bind(this)
+    this.logout = this.logout.bind(this)
   }
 
   componentWillMount() {
@@ -83,15 +89,16 @@ class App extends Component {
     };
   }
   handleClick(e) {
+    if (this.state.islogin) {
+      this.setState({
+        current: e.key,
+      });
 
-    this.setState({
-      current: e.key,
-    });
+      let path = '/' + e.keyPath[0]
 
-    let path = '/' + e.keyPath[0]
+      this.props.history.push(path)
 
-
-    this.props.history.push(path)
+    }
 
   }
   rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
@@ -105,8 +112,69 @@ class App extends Component {
       });
     }
   };
+
+  handleGetInputValue = (event) => {
+    this.setState({
+      username: event.target.value,
+    })
+  };
+  handleGetpPasswordValue = (event) => {
+    this.setState({
+      password: event.target.value,
+    })
+  };
+
+
+
+  async handlePost() {
+
+    let { username, password } = this.state;
+    console.log(username, password);
+
+    if (username.length === 0 || password.length === 0) {
+      alert("账号或密码不能为空")
+    }
+    else {
+      api.post('/login', {
+        params: {
+          phone: username,
+          password: password
+        }
+      }).then(res => {
+        console.log(res)
+        let { data } = res
+        console.log(data)
+        if (data === 101 || data === 102) {
+          alert('账号或密码错误')
+        } else if (data.code === 1000) {
+          localStorage.setItem('Authorization', data.data);
+          this.setState({
+            islogin: !this.state.islogin,
+          })
+
+        }
+      })
+
+    }
+
+
+
+  }
+
+  logout() {
+
+    localStorage.setItem('Authorization', '');
+    this.setState({
+      islogin: !this.state.islogin,
+    });
+    this.props.history.push('/loginin')
+  }
+
+
+
+
   render() {
-    let { navList } = this.state
+    let { navList, islogin } = this.state
     return (
       <div className="appbox">
         <div className="navlist">
@@ -163,24 +231,66 @@ class App extends Component {
         </div>
         <div className="maincontent">
           <div className="main-top">
-            <div className="loginIn">
+            {islogin ? <div className="loginIn" onClick={this.logout}>
               退出登录
+            </div> :
+              <div className="loginIn">
+                登录
             </div>
+            }
           </div>
           <div className="main-content">
-            <Switch>
-              {
-                navList.map(item => {
-                  return (
 
-                    <Route key={item.name} path={item.path} component={item.component}></Route>
+            {
+              islogin ? <>
+                <Switch>
 
-                  )
+                  {
+                    navList.map(item => {
+                      return (
 
-                })
-              }
-              <Redirect from='/' to='/goodslist' />
-            </Switch>
+                        <Route key={item.name} path={item.path} component={item.component}></Route>
+
+                      )
+
+                    })
+                  }
+
+                  <Redirect from='/' to='/goodslist' />
+                </Switch>
+              </> : <>
+
+                  <Route path='/loginin' render={
+                    () => {
+                      return (
+                        <div className="login-box">
+                          <h2 >请先登录</h2>
+                          <li>
+                            <label htmlFor='title' className="login-title">用户账号:</label>
+                            <input id='username' className='login-comon'
+                              value={this.state.username}
+                              onChange={this.handleGetInputValue}
+                              key="username"
+                            >
+
+                            </input>
+                          </li>
+                          <li>
+                            <label htmlFor='des' className="login-title">用户密码:</label>
+                            <input id='password' className='login-comon' value={this.state.password} onChange={this.handleGetpPasswordValue} key="password"></input>
+                          </li>
+                          <button className="login-button" onClick={this.handlePost}>登录</button>
+                        </div>
+                      )
+                    }
+                  } />
+                  <Redirect from='/' to='/loginin' />
+                </>
+            }
+
+
+
+
           </div>
         </div>
       </div>
