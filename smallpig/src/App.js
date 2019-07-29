@@ -11,11 +11,10 @@ import {
 } from 'react-router-dom';
 import Home from './view/Home/Home';
 import Lend from './view/Lend/Lend';
-import Mine from './view/Mine/Mine';
-// import Login from './pages/Login/Login';
+// import Mine from './view/Mine/Mine';
+import Login from './pages/Login/index';
 import Detail from './view/Detail/Detail';
-// import order from './view/order/order';
-import Login from './pages/Login'
+// import Login from './pages/Login'
 import Mine from './pages/Mine'
 import BankCard from './pages/Mine/BankCard'
 import Project from './pages/Mine/project'
@@ -45,7 +44,6 @@ class App extends Component {
           <Route path='/mine' component={Mine} />
           <Route path="/detail" component={Detail} />
           <Route path="/login" component={Login} />
-          {/* <Route path="/mine" component={Mine}/> */}
           <Route path="/bankcard" component={BankCard} />
           <Route path="/project" component={Project} />
           <Route path="/information" component={Information} />
@@ -63,7 +61,7 @@ class App extends Component {
                 <NavLink to='/lend' activeStyle={{ color: '#40538f', fontWeight: "bolder" }}><i className="icon ic-list"></i> <span>出借</span></NavLink>
               </li>
               <li>
-                <NavLink to='/mine' activeStyle={{ color: '#40538f', fontWeight: "bolder" }}><i className="icon ic-user"></i> <span>我的</span></NavLink>
+                <NavLink to='/login' activeStyle={{ color: '#40538f', fontWeight: "bolder" }}><i className="icon ic-user"></i> <span>我的</span></NavLink>
               </li>
             </ul>
           </nav>
