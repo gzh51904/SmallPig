@@ -3,6 +3,7 @@ import {NavLink,Route} from 'react-router-dom';
 // import Detail from './Detail/Detail';
 
 
+
 import './lend.scss'
 class Lend extends Component{
     constructor(props){
@@ -55,6 +56,7 @@ class Lend extends Component{
 
     }
     render(){
+        let   {isToggleOn} =this.state;
         return (
         <div>
             <div className="heads" style={{backgroundcolor: '#efeff4'}}>
@@ -102,16 +104,19 @@ class Lend extends Component{
                 </ul> 
             </main>
             {/* 路由信息 在App.js中*/}
-            <div className="order active" id="order1" ref='sh' style={{display: this.state.display}}> 
-                 <ul> 
-                     <li data-name="0" className="active">全部</li> 
-                     <li data-name="6">企业经营贷</li> 
-                     <li data-name="3">建材供应贷</li> 
-                     <li data-name="7">小微企业贷</li> 
-                     <li data-name="4">项目承包贷</li> 
-                     <li data-name="5">精英担保贷</li> 
+                {
+                    isToggleOn? <div className="order active" id="order1" ref='sh' > 
+                    <ul> 
+                        <li data-name="0" className="active">全部</li> 
+                        <li data-name="6">企业经营贷</li> 
+                        <li data-name="3">建材供应贷</li> 
+                        <li data-name="7">小微企业贷</li> 
+                        <li data-name="4">项目承包贷</li> 
+                        <li data-name="5">精英担保贷</li> 
                 </ul> 
-            </div>
+                </div>:<></>
+                }
+           
         </div>
         )
     }

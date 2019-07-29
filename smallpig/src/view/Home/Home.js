@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {NavLink,Route} from 'react-router-dom';
 import { Carousel } from 'antd';
 import './home.scss';
 class Home extends Component{
@@ -48,14 +49,14 @@ class Home extends Component{
                 </div>
                 <main>
                      <div className={"data-show"}>
-                        <a href={"/Api/h5/safe"} className={"item left"}>
+                        <a href={"#"} className={"item left"}>
                             <div className={"data"}>
                                 <span className={"title"}>已安全运营</span> 
                                 <p className={"value"}><span className={"accent"}>1606</span><span>天</span></p> 
                             </div> 
                                 <p className={"logo"}> <img src={require('../../assets/images/safe.png')} style={{width:'1.52rem' ,height: '1.52rem'}} alt={''}/><span>安全保障</span> </p> 
                         </a>
-                        <a href={"/Api/h5/data"} className={"item right"}> 
+                        <a href={"#"} className={"item right"}> 
                             <div className={"data"}>> 
                                 <span className={"title"}>累计成交额</span>
                                 <p className={"value"}> <span className={"accent"}>125</span><span>亿</span> <span className={"accent"}>3157</span><span>万</span> </p>
@@ -65,7 +66,8 @@ class Home extends Component{
                     </div>
                      <ul className={"bdlist"}> 
                         <li> 
-                            <a href={"/wechat/mark/details/id/62945"}> 
+                        <NavLink to='/detail'>
+                            <a href={"#"}> 
                                 <i className={"tag"}></i> 
                                 <p className={"title"}> <i className={"divider left-divider"}></i> <span>新手专享</span> <i className={"divider right-divider"}></i> </p> 
                                 <p className={"annual"}> <span>13.0</span> <span>%</span> </p> 
@@ -73,10 +75,12 @@ class Home extends Component{
                                     <p className="term"> <span className={"title"}>期限：</span> <span className={"value"}>90天</span> </p> 
                                 </div> 
                             </a>
-                            <a href={"/wechat/mark/details/id/62945"} className={"btn big bg disable"}>已满标</a> 
+                            <a href={"#"} className={"btn big bg disable"}>已满标</a>
+                            </NavLink> 
                          </li>
                          <li> 
-                            <a href={"/wechat/mark/details/id/62945"}> 
+                         <NavLink to='/detail'>
+                            <a href={"#"}> 
                                 <i className={"tag"}></i> 
                                 <p className={"title"}> <i className={"divider left-divider"}></i> <span>新手专享</span> <i className={"divider right-divider"}></i> </p> 
                                 <p className={"annual"}> <span>13.0</span> <span>%</span> </p> 
@@ -84,10 +88,12 @@ class Home extends Component{
                                     <p className="term"> <span className={"title"}>期限：</span> <span className={"value"}>90天</span> </p> 
                                 </div> 
                             </a>
-                            <a href={"/wechat/mark/details/id/62945"} className={"btn big bg disable"}>已满标</a> 
+                            <a href={"#"} className={"btn big bg disable"}>已满标</a>
+                            </NavLink> 
                          </li>
                          <li> 
-                            <a href={"/wechat/mark/details/id/62945"}> 
+                         <NavLink to='/detail'>
+                            <a href={"#"}> 
                                 <i className={"tag"}></i> 
                                 <p className={"title"}> <i className={"divider left-divider"}></i> <span>新手专享</span> <i className={"divider right-divider"}></i> </p> 
                                 <p className={"annual"}> <span>13.0</span> <span>%</span> </p> 
@@ -95,7 +101,8 @@ class Home extends Component{
                                     <p className="term"> <span className={"title"}>期限：</span> <span className={"value"}>90天</span> </p> 
                                 </div> 
                             </a>
-                            <a href={"/wechat/mark/details/id/62945"} className={"btn big bg disable"}>已满标</a> 
+                            <a href={"#"} className={"btn big bg disable"}>已满标</a> 
+                            </NavLink>
                          </li>
                        
                     </ul>  

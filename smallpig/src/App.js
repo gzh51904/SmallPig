@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React, {Component}from 'react';
 import './App.scss';
 
 // import {Route,Switch,Redirect} from 'react-router-dom'
@@ -11,6 +11,8 @@ import {
 } from 'react-router-dom';
 import Home from './view/Home/Home';
 import Lend from './view/Lend/Lend';
+import Mine from './view/Mine/Mine';
+// import Login from './pages/Login/Login';
 import Detail from './view/Detail/Detail';
 // import order from './view/order/order';
 import Login from './pages/Login'
@@ -19,11 +21,6 @@ import BankCard from './pages/Mine/BankCard'
 import Project from './pages/Mine/project'
 import Information from './pages/Mine/information'
 import Product from './pages/Mine/product';
-
-
-
-import './App.scss';
-
 
 
 class App extends Component {
