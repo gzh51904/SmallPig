@@ -13,6 +13,7 @@ import Lend from './view/Lend/Lend';
 import Mine from './view/Mine/Mine';
 import Detail from './view/Detail/Detail';
 
+
 class App extends Component {
   constructor(){
     super();

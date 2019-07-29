@@ -60,7 +60,7 @@ section {
   left: 33.333333%;
 }
 .heads nav .menus .menu:nth-child(2):after,
-header nav .menus .menu:nth-child(2):before {
+.heads nav .menus .menu:nth-child(2):before {
   content: "";
   background: url(../../assets/images/js.png) 50% no-repeat;
   height: 0.8rem;
@@ -68,6 +68,12 @@ header nav .menus .menu:nth-child(2):before {
   position: absolute;
   background-size: 100%;
   top: 0.18667rem;
+}
+.heads nav .menus .menu:nth-child(2):before {
+  left: 33.333333%;
+}
+.heads nav .menus .menu:nth-child(2):after {
+  right: 33.333333%;
 }
 .icon.ic-order-normal2 {
   background-image: url(../../assets/images/jn.png);

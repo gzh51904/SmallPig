@@ -3,6 +3,7 @@ import {NavLink,Route} from 'react-router-dom';
 // import Detail from './Detail/Detail';
 
 
+
 import './lend.scss'
 class Lend extends Component{
     constructor(props){
@@ -36,30 +37,20 @@ class Lend extends Component{
                 {name:'项目承包贷',number:'CBD201807230905', date:'90天', value1:'11.0', value2:'%+0%' },
                 
             ],
-            data:{
-                isToggleOn: true,
-                display:'none'
-            },
-            currentIndex: 0
-        
-            
+           
+                isToggleOn: false,            
         }
         this.showhide=this.showhide.bind(this)
-        this.setCurrentIndex = this.setCurrentIndex.bind(this)
+        
     }
     showhide(){
         this.setState(prevState => ({
-            isToggleOn: !prevState.isToggleOn,
-            display: prevState.isToggleOn ? 'none': 'block'
+            isToggleOn: !prevState.isToggleOn,         
           }));
 
     }
-    setCurrentIndex(event) {
-        this.setState({
-          currentIndex: parseInt(event.currentTarget.getAttribute('index'), 10)
-        })
-      }
     render(){
+        let   {isToggleOn} =this.state;
         return (
         <div>
             <div className="heads" style={{backgroundcolor: '#efeff4'}}>
@@ -107,18 +98,19 @@ class Lend extends Component{
                 </ul> 
             </main>
             {/* 路由信息 在App.js中*/}
-            {/* <Route path="/detail" component={Detail}/> */}
-            <div className="order active" id="order1" ref='sh' style={{display: this.state.display}}> 
-                 <ul> 
-                     <li data-name="0" className="active" className={this.state.currentIndex === i ? 'active' : ''}
-               index={i} onClick={this.setCurrentIndex}>全部</li> 
-                     <li data-name="6">企业经营贷</li> 
-                     <li data-name="3">建材供应贷</li> 
-                     <li data-name="7">小微企业贷</li> 
-                     <li data-name="4">项目承包贷</li> 
-                     <li data-name="5">精英担保贷</li> 
+                {
+                    isToggleOn? <div className="order active" id="order1" ref='sh' > 
+                    <ul> 
+                        <li data-name="0" className="active">全部</li> 
+                        <li data-name="6">企业经营贷</li> 
+                        <li data-name="3">建材供应贷</li> 
+                        <li data-name="7">小微企业贷</li> 
+                        <li data-name="4">项目承包贷</li> 
+                        <li data-name="5">精英担保贷</li> 
                 </ul> 
-            </div>
+                </div>:<></>
+                }
+           
         </div>
         )
     }
